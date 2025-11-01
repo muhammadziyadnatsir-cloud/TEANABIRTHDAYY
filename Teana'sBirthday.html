@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday TEANAAA 🎉</title>
+    <style>
+        /* Gaya CSS sama seperti sebelumnya */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0; 
+            font-family: 'Arial', sans-serif; 
+            overflow: hidden;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 90%;
+            min-height: 450px; 
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.5s;
+        }
+        .page {
+            display: none;
+            padding: 20px 0;
+            opacity: 0;
+            transition: opacity 0.5s;
+            flex-grow: 1; 
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+        .page.active {
+            display: flex;
+            opacity: 1;
+        }
+        .title-hbd {
+            color: #ff69b4; 
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .message-title {
+            color: #3f51b5; 
+            font-size: 1.5em;
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+        .wishes {
+            text-align: left;
+            margin-top: 20px;
+            padding: 10px;
+            border-top: 1px solid #eee;
+            overflow-y: auto; 
+            max-height: 250px; 
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .wish-item {
+            margin-bottom: 25px;
+            border-left: 3px solid #ff9800;
+            padding-left: 10px;
+        }
+        .wish-item strong {
+            display: block;
+            margin-bottom: 5px;
+            color: #e91e63;
+        }
+        button {
+            background-color: #3f51b5;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .icon {
+            width: 150px; 
+            height: auto;
+            margin-bottom: 20px;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        button {
+            animation: pulse 1.5s infinite;
+        }
+        /* Gaya khusus untuk halaman 10 dan 11 */
+        #page10, #page11 {
+            background-color: #e6e6fa; 
+            border-radius: 15px;
+            padding: 30px 20px;
+            margin-top: 20px;
+            text-align: left;
+        }
+        .wish-item-special {
+            border-left: 5px solid #00bcd4;
+            padding-left: 15px;
+            font-size: 1.05em;
+            margin-bottom: 15px;
+        }
+        .wish-item-special strong {
+            color: #00bcd4;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+
+    <audio id="background-music" loop>
+        <source src="kasih_putih.mp3" type="audio/mp3">
+        Browser Anda tidak mendukung elemen audio.
+    </audio>
+
+    <div class="container">
+        
+        <div id="page1" class="page active">
+            <img src="https://i.imgur.com/vHq49Qy.png" alt="Birthday Cake Icon" class="icon"> 
+            <h1 class="title-hbd">Happy Birthday TEANAAA</h1>
+            <p>your next surprise is just a click away ✨</p>
+            <button onclick="nextPage(2)">tap &lt;3</button>
+        </div>
+
+        <div id="page2" class="page">
+            <img src="https://i.imgur.com/rN9e8sH.png" alt="Envelope Icon" class="icon">
+            <p>knock knock .. open me up! ( ੭ ･ᴗ･ )੭</p>
+            <button onclick="nextPage(3)">open it &lt;3</button>
+        </div>
+
+        <div id="page3" class="page">
+            <h2 class="message-title">Pesan untuk Sekretaris kelas 8D dan Osis</h2>
+            <div class="wishes">
+                <div class="wish-item">
+                    <strong>1. from : bestieee to : teaaa (Tamara)</strong>
+                    <p>sumpahh gw ga nyangka lo udah nambah umur lagi, ciee nambah tua bestie gw pibesdey yaaa cintaaa, padahal gw udah seneng tuh kemarin jadi seumuran ama lo, lo makin tinggi juga padahal dulu lo cuma sekuping gw, efek sering sharing bekel pas kelas 7 kayaknya, semogaa apapun yang lo mau tercapaii, makin pinter sukses, sehat sehat teruss, kangen deh sebangku ama lo ketawain apa aja, ituuu aja deh pibesdey yaa bestieee</p>
+                </div>
+            </div>
+            <button onclick="nextPage(4)">Lihat Pesan Selanjutnya &gt;&gt;</button>
+        </div>
+
+        <div id="page4" class="page">
+            <h2 class="message-title">Lanjutan Pesan dari Temanmu</h2>
+            <div class="wishes">
+                <div class="wish-item">
+                    <strong>2. (Kanaya. Kanaya rada rada ya)</strong>
+                    <p>tinggal habede</p>
+                </div>
+                <div class="wish-item">
+                    <strong>3. 𝒟ear 𝒯eana,</strong>
+                    <p>happy birthday. i hope this year brings u a lot of happiness, and i wish someone (that boy) catch ur feelings :p</p>
+                </div>
+            </div>
+            <button onclick="nextPage(5)">Lihat Pesan Selanjutnya &gt;&gt;</button>
+        </div>
+
+        <div id="page5" class="page">
+            <h2 class="message-title">Pesan dari Dimas</h2>
+            <div class="wishes">
+                <div class="wish-item">
+                    <strong>4. (Dimas Bola Basket)</strong>
+                    <p>happy birthday Teana panjang umur sehat selalu semoga bisa capai yang lu pengen,terus jadi OSIS yang dibanggakan semua orang</p>
+                </div>
+            </div>
+            <button onclick="nextPage(6)">Lihat Pesan Selanjutnya &gt;&gt;</button>
+        </div>
+
+        <div id="page6" class="page">
+            <h2 class="message-title">Pesan dari Nejir Gemes</h2>
+            <div class="wishes">
+                <div class="wish-item">
+                    <strong>5. (dari nejir gemes)</strong>
+                    <p>happyyy 14th daayyy bistyyyyyyyyyyy, semoga apa yang kamu inginkan terwujud, semoga apa yang kamu semogakan tersemogakan, semogaaa panjang umuurrr (harus gksih) semoga kita berteman sampai kapanpuuuuuyynnnnn, hapappapayyyyy berdddeeeyyyy yeeeyyyyyyyyyyyyyy😘😳😛😳❤️❣️🌹🤗💯🤗🤗😮🌹😋🌹😝😦🌹❣️🤗😚🌹😚🌹😛😳🥰😚😳🤤😳😛🤣🥰🤭🤗🤗😋🌹😘😭🌹😦🌹</p>
+                    <p style="font-size: 0.8em; margin-top: 5px; color: #555;">*dia yg ngomong bukan gua</p>
+                </div>
+            </div>
+            <button onclick="nextPage(7)">Lihat Pesan Selanjutnya &gt;&gt;</button>
+        </div>
+
+        <div id="page7" class="page">
+            <h2 class="message-title">Pesan dari Putri</h2>
+            <div class="wishes">
+                <div class="wish-item">
+                    <strong>6. (Putri)</strong>
+                    <p>setiap orang ada masanya dan setiap masa ada orangnya, aku tau kita ga selamanya bakal terus terusan bareng, aku gatau sampai kapan kita berteman, tapi terimakasih udah hadir dihidup aku, sudah jadi teman terbaik buat aku selama ini, terimakasih udah dengerin semua keluh kesah aku, terimakasih udah kasih support system terbaik sejauh ini, gimanapun endnya pertemanan kita nanti, aku senang dan beruntung bisa kenal orang sebaik kamu, punya temen yang bener bener temen kayak kamu, i hope we continue to be together, always share stories and become friends forever.</p>
+                </div>
+            </div>
+            <button onclick="nextPage(8)">Lihat Pesan Selanjutnya &gt;&gt;</button>
+        </div>
+
+        <div id="page8" class="page">
+            <h2 class="message-title">Pesan dari Anindya</h2>
+            <div class="wishes">
+                <div class="wish-item">
+                    <strong>7. (Anindya)</strong>
+                    <p>WAITT, HAPPY BIRTHDAY TEANAA!!. Semoga panjang umur sehat selalu yaaa. Aku bersyukur banget punyq temen kayak kamu Te. Kamu itu pinter baik terus kamu berprestasi lagi dan aku lagi kesusahan sama tugas, kamu pasti bantu aku. Dan semoga saja apa yang kamu inginkan tercapai yaa</p>
+                </div>
+            </div>
+            <button onclick="nextPage(9)">Lihat Pesan Selanjutnya &gt;&gt;</button>
+        </div>
+        
+        <div id="page9" class="page">
+            <h2 class="message-title">Tinggal 2 Pesan Penting Lagi...</h2>
+            <p>Pesan dari Ketua Kelas dan Bonus Spesial!</p>
+            <p style="font-size: 3em; margin: 30px 0;">🌟</p>
+            <button onclick="nextPage(10)">Pesan Ketua Kelas &gt;&gt;</button>
+        </div>
+
+        <div id="page10" class="page">
+            <h2 class="message-title" style="text-align: center;">Pesan dari Ketua Kelas!</h2>
+            <div class="wish-item-special">
+                <strong>DARI KETUA KELAS (Ziyad)</strong>
+                <p>Habede Teana, terus..... gua tau mau ucapin apa lagi... hehe, pokoknya makasih udah menjadi Sekret yang baik di kelas bersama dengan Putri dann semoga bisa bagus juga di Osis... apa lagi ya, dan semoga masuk sma dan universitas yang lu mau, dan jangan patah semangat saat menghadapi kegagalan dan lain lain, pokoknya yang terbaikdah buat lu</p>
+                <p style="font-size: 0.8em; margin-top: 5px; color: #555;">*btw gua dibantu ai buat bikin ini.</p>
+            </div>
+            <p style="margin-top: 20px; text-align: center;">
+                <button onclick="nextPage(11)">Bonus Spesial Terakhir &gt;&gt;</button>
+            </p>
+        </div>
+        
+        <div id="page11" class="page">
+            <h2 class="message-title" style="text-align: center;">Bonus Hangat dari Keluarga!</h2>
+            <div class="wish-item-special">
+                <strong>Bonus dari nyokap gua</strong>
+                <p>Happy Born Day TEANA</p>
+                <p>Many Happy Returns</p> 
+                <p>Have a Fabulous Birthday</p>
+                <p>Wishing You a Day That is as Special as You Are</p>
+                <p>Congratulations on Another Year Well-Spent</p>
+                <p>All The Best Wishes Always</p>
+            </div>
+            
+            <p style="margin-top: 30px; font-style: italic; color: #e91e63; font-weight: bold; text-align: center;">
+                🎉 Happy Birthday Teana! Semoga Bahagia Selalu! 🎉
+            </p>
+        </div>
+
+    </div>
+
+    <script>
+        const music = document.getElementById('background-music');
+        let current_page = 1;
+        const total_pages = 11; // Total halaman sekarang adalah 11
+
+        function nextPage(pageNumber) {
+            if (pageNumber > total_pages) return;
+
+            // Nonaktifkan tombol sebentar untuk menghindari klik ganda
+            const allButtons = document.querySelectorAll('button');
+            allButtons.forEach(button => button.disabled = true);
+            
+            // Sembunyikan halaman saat ini
+            const currentPageElement = document.getElementById('page' + current_page);
+            if (currentPageElement) {
+                currentPageElement.classList.remove('active');
+            }
+            
+            // Tampilkan halaman berikutnya
+            current_page = pageNumber;
+            const nextPageElement = document.getElementById('page' + current_page);
+            nextPageElement.classList.add('active');
+
+            // Aktifkan kembali tombol setelah transisi singkat
+            setTimeout(() => {
+                allButtons.forEach(button => button.disabled = false);
+            }, 500);
+
+
+            // Coba putar musik saat tombol pertama diklik
+            if (pageNumber === 2 && music.paused) {
+                music.play().catch(error => {
+                    console.log('Autoplay was prevented. User needs to interact first.', error);
+                });
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('page1').classList.add('active');
+        });
+    </script>
+
+</body>
+</html>
